@@ -1,0 +1,232 @@
+@import url('./fonts.css');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+}
+
+.controls-div {
+    background-color: #1a1a1a;
+    color: #ddd;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    padding: 2.5px 5px;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.controls-div > div {
+    display: table-cell;
+}
+
+.controls-div > div:last-child {
+    text-align: right;
+    padding-right: 6px;
+}
+
+.controls-div > div * {
+    -webkit-app-region: no-drag;
+    vertical-align: middle;
+}
+
+.title-span {
+    font-family: 'Arial';
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+}
+
+.controls-logo {
+    width: auto;
+    height: 20px;
+}
+
+.controls-div i {
+    margin: 0 2.5px;
+    transition: .3s ease;
+}
+
+.controls-div i:hover {
+    cursor: pointer;
+    color: #ff4cab;
+}
+
+.top-bar-logo {
+    width: auto;
+    height: 75px;
+}
+
+#client-hostname {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Ubuntu Mono', monospace;
+    letter-spacing: 2.5px;
+    background-color: #333;
+    color: #ddd;
+    padding: 25px;
+    margin: 0;
+}
+
+.client-info-table, .client-controls-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+.client-info-table td {
+    padding: 5px 15px;
+}
+
+.client-info-table td:last-child {
+    text-align: right;
+}
+
+.client-info-table tr {
+    transition: .35s ease;
+}
+
+.client-info-table tr:hover {
+    background-color: rgba(0,0,0,.04);
+}
+
+#client-store-dir {
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: #aaa;
+    color: #222;
+    letter-spacing: 1px;
+    padding: 1.5px 5px;
+    border-radius: 5px;
+}
+
+#change-store-dir {
+    transition: .3s ease;
+}
+
+#change-store-dir:hover {
+    cursor: pointer;
+    opacity: .85;
+    transform: scale(1.1);
+}
+
+.client-controls-table .input-td {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.client-controls-table .input-td > div {
+    /* border: 1.5px solid #f2f2f2; */
+    padding: 2.5px 10px;
+    border-radius: 5px;
+    color: #444;
+    display: flex;
+    justify-content: center;
+}
+
+.client-controls-table .input-td > div > input {
+    margin-left: 12.5px;
+    flex-grow: 1;
+    border: none;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.client-controls-table .input-td > div > input:focus {
+    outline: none;
+}
+
+.client-controls-table .input-td > div * {
+    vertical-align: middle;
+}
+
+.client-power-wrapper {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 25px;
+}
+
+#client-power {
+    font-size: 2.5em;
+    background-image: linear-gradient(#111, #555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .3s ease;
+}
+
+#client-power:hover {
+    opacity: .6;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.client-output-wrapper {
+    padding: 15px;
+}
+
+.client-output-wrapper label {
+    display: flex;
+}
+
+.client-output-wrapper * {
+    vertical-align: bottom;
+}
+
+.client-output-wrapper label i {
+    text-align: right;
+    color: #444;
+    margin-left: 1px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+.client-output-wrapper label span {
+    flex-grow: 1;
+    text-align: right;
+}
+
+#client-output {
+    background-color: rgba(0,0,0,.8);
+    color: #eee;
+    font-family: 'Ubuntu Mono', monospace;
+    letter-spacing: 1.25px;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 0;
+    display: block;
+    max-height: 250px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+#client-output::-webkit-scrollbar {
+    background-color: rgba(0,0,0,0);
+    width: 7.5px;
+}
+
+#client-output::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0);
+    border-radius: 4px;
+}
+
+#client-output::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, rgba(169, 255, 210, .8), rgba(169, 255, 253, .8));
+    border-radius: 4px;
+}
+
+@media only screen and (min-width: 800px) {
+    .client-info-table, .client-controls-table {
+        width: 80%;
+        border: 1.5px solid #f2f2f2;
+    }
+}

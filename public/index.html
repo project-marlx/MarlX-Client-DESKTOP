@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Baum²" />
+
+    <link rel="stylesheet" type="text/css" href="style/fontawesome/css/all.css" />
+
+    <title>MarlX-Client</title>
+    <link rel="stylesheet" type="text/css" href="style/index.css" />
+</head>
+
+<body>
+    <header class="controls-div">
+        <div>
+            <img class="controls-logo" src="favicon.ico" />
+            <span class="title-span">MarlX-Client</span>
+        </div>
+        <div>
+            <i id="minimize-control" title="Into tray" class="fas fa-window-minimize"></i>
+            <i id="max-control" title="Maximize" class="far fa-window-maximize"></i>
+            <i id="close-control" title="Close" class="fas fa-times"></i>
+        </div>
+    </header>
+
+    <main>
+        <h1 id="client-hostname"></h1>
+        <article>
+            <table class="client-info-table">
+                <tr>
+                    <td>
+                        Total size:
+                    </td>
+                    <td id="client-store-dir-size">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Storage directory:
+                    </td>
+                    <td>
+                        <span id="client-store-dir"></span>
+                        <i id="change-store-dir" title="Change storage directory ..." class="far fa-folder-open"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        MTU:
+                    </td>
+                    <td id="client-mtu">
+                    </td>
+                </tr>
+            </table>
+
+            <table class="client-controls-table">
+                <tr>
+                    <td colspan="2" class="input-td">
+                        <div>
+                            <i class="fas fa-key"></i>
+                            <input id="client-token" type="text" maxlength="64" minlength="64" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="client-power-wrapper">
+                        <i id="client-power" title="Client on/off ... " class="fas fa-power-off"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="client-output-wrapper">
+                        <label>
+                            <i class="fas fa-terminal"></i>
+                            <span>client-output</span>
+                        </label>
+                        <pre id="client-output"></pre>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </main>
+
+    <script>
+        require('./scripts/renderer.js');
+    </script>
+</body>
+
+</html>
