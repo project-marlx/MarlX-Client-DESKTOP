@@ -1,0 +1,39 @@
+{
+  "name": "marlx-client",
+  "version": "0.0.1",
+  "description": "The client software for Project MarlX.",
+  "main": "app.js",
+  "author": "MattMoony",
+  "license": "MIT",
+  "repository": "",
+  "build": {
+    "appId": "marlx.marlx-client",
+    "productName": "MarlX-Client",
+    "asar": true,
+    "extraResources": [
+      {
+        "from": "./includes/",
+        "to": "includes",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist-all": "electron-builder -wl",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6",
+    "fs-extra": "^7.0.1",
+    "get-folder-size": "^2.0.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^20.39.0",
+    "electron-reload": "^1.4.0"
+  }
+}
