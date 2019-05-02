@@ -24,7 +24,7 @@
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "dist-all": "electron-builder -wl",
+    "dist-linux": "electron-builder -l",
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
