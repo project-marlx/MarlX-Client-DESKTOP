@@ -155,7 +155,7 @@ function updateClientConf() {
     document.getElementById('client-token').onblur = document.getElementById('client-token').onchange;
 
     document.getElementById('client-power').onclick = () => {
-        if (CCONF.token === '' || confirm.token.length < 64 ||
+        if (CCONF.token === '' || CCONF.token.length < 64 ||
             +CCONF.MTU < 1000 || isNaN(+CCONF.MTU) ||
             CCONF.store_dir === '' || !fs.existsSync(CCONF.store_dir)
         ) {
